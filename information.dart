@@ -99,7 +99,7 @@ class Information{
         print('enter the desired todo option');
         todoOption =input();
       }
-      if(todos[todoOption-1].isDone=true){
+      if(todos[todoOption-1].isDone==true){
         print('this todo is done');
       }else {
         todos[todoOption - 1].isDone= true;
@@ -119,7 +119,7 @@ class Information{
         print('enter the desired todo option');
         todoOption=input();
       }
-      if(todos[todoOption-1].isDone=true){
+      if(todos[todoOption-1].isDone==true){
         print('todo is done you cant change this todo');
         option();
       }else{
@@ -198,11 +198,11 @@ class Information{
 
 String inputString() {
   var inp = stdin.readLineSync();
-  if (inp == '') {
+  if (inp!.trim()=='') {
     print('Please Enter Something');
     return inputString();
   } else {
-    return inp!.trim();
+    return inp;
   }
 }
 
